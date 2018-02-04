@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Admin Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+    <!--<form th:action="@{/logout}" method="get">
+        <button class="btn btn-md btn-danger btn-block" name="registration"
+                type="Submit">Logout</button>
+    </form>-->
+
+    <section style="color: rgba(0, 0, 0, 0.5);">
+        <h2>Shift</h2>
+        <nav class="shift nav1">
+            <ul>
+                <li><a th:href="@{/globaltel/home}">Globaltel</a></li>
+                <li><a th:href="@{/globaltel/statistika}">Statistika</a></li>
+                <li><a th:href="@{/globaltel/listing}">Listing</a></li>
+                <li><a href="#">Ponuda</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <nav class="navbar navbar-default nav2" role="navigation">
+       <!-- <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Company Name</a>
+        </div> -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <!-- <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li> -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Broj telefona: <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">381677100256</a></li>
+                        <li><a href="#">381677858586</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mesec: <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Januar</a></li>
+                        <li><a href="#">Februar</a></li>
+                        <li><a href="#">Mart</a></li>
+                        <li><a href="#">April</a></li>
+                        <li><a href="#">Maj</a></li>
+                        <li><a href="#">Jun</a></li>
+                        <li><a href="#">Jul</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="col-sm-3 col-md-3 pull-right">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pozivani broj" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+    <p class="obracun">Listing za broj telefona 381677100256 u obracunskom peridou februar 2018</p>
+    <div class="wrapper">
+        <table id="acrylic">
+            <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Pozivani broj</th>
+                <th>Vreme početka</th>
+                <th>Trajanje poziva</th>
+                <th>Naziv usluge</th>
+                <th>Cena</th>
+                <th>Država</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>23.01.2018.</td>
+                <td>38167548484</td>
+                <td>09:24:24</td>
+                <td>09:24:36</td>
+                <td>Van mreže u domaćem saobraćaju</td>
+                <td>15,9</td>
+                <td>Srbija</td>
+            </tr>
+            <tr>
+                <td>23.01.2018.</td>
+                <td>38167548484</td>
+                <td>09:24:24</td>
+                <td>09:24:36</td>
+                <td>Van mreže u domaćem saobraćaju</td>
+                <td>15,9</td>
+                <td>Srbija</td>
+            </tr>
+            <tr>
+                <td>23.01.2018.</td>
+                <td>38167548484</td>
+                <td>09:24:24</td>
+                <td>09:24:36</td>
+                <td>Van mreže u domaćem saobraćaju</td>
+                <td>15,9</td>
+                <td>Srbija</td>
+            </tr>
+            <tr>
+                <td>23.01.2018.</td>
+                <td>38167548484</td>
+                <td>09:24:24</td>
+                <td>09:24:36</td>
+                <td>Van mreže u domaćem saobraćaju</td>
+                <td>15,9</td>
+                <td>Srbija</td>
+            </tr>
+            <tr>
+                <td>23.01.2018.</td>
+                <td>38167548484</td>
+                <td>09:24:24</td>
+                <td>09:24:36</td>
+                <td>Van mreže u domaćem saobraćaju</td>
+                <td>15,9</td>
+                <td>Srbija</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!--<div class="panel-group" style="margin-top:40px">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <span th:utext="${userName}"></span>
+            </div>
+            <div class="panel-body">
+                <img th:src="@{/images/beer.jpg}" class="img-responsive center-block" width="400" height="400" alt="Beer" />
+            </div>
+            <p class="admin-message-text text-center" th:utext="${adminMessage}"></p>
+        </div>
+    </div>-->
+
+</div>
+</body>
+</html>
+
+<style>
+    table#acrylic {
+        border-collapse: separate;
+        background: #fff;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        margin: 0px auto;
+        -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        width: 80%;
+    }
+
+    #acrylic thead {
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #acrylic thead th {
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+        text-align: left;
+        padding: 20px;
+        background-size: 100%;
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #646f7f), color-stop(100%, #4a5564));
+        background-image: -moz-linear-gradient(#646f7f, #4a5564);
+        background-image: -webkit-linear-gradient(#646f7f, #4a5564);
+        background-image: linear-gradient(#646f7f, #4a5564);
+        border-top: 1px solid #858d99;
+    }
+
+    #acrylic thead th:first-child {
+        -moz-border-top-right-radius: 5px;
+        -webkit-border-top-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    #acrylic thead th:last-child {
+        -moz-border-top-right-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #acrylic tbody tr td {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: #5f6062;
+        font-size: 13px;
+        padding: 20px 20px 20px 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    #acrylic tbody tr:nth-child(2n) {
+        background: #f0f3f5;
+    }
+
+    #acrylic tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    #acrylic tbody tr:last-child td:first-child {
+        -moz-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    #acrylic tbody tr:last-child td:last-child {
+        -moz-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    #acrylic tbody:hover > tr td {
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=50);
+        opacity: 0.5;
+    }
+
+    #acrylic tbody:hover > tr:hover td {
+        text-shadow: none;
+        color: #2d2d2d;
+        filter: progid: DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        transition: 0.2s all;
+    }
+
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+
+    small {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+        text-align: center;
+        padding: 50px 0;
+        font-weight: 800;
+        margin: 0;
+        letter-spacing: -1px;
+        color: inherit;
+        font-size: 40px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+        font-weight: 300;
+        color: inherit;
+        padding: 50px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    section {
+     /*   height: 100vh; */
+    }
+
+    /* NAVIGATION */
+    .nav1 {
+        width: 80%;
+        margin: 0 auto;
+        background: #f9f9f9;
+        /*padding: 50px 0;*/
+        box-shadow: 0px 5px 0px #e50075;
+    }
+
+    .nav2 {
+        width: 80%;
+        margin: 0 auto;
+        background: #f9f9f9;
+        /*padding: 50px 0;*/
+       /* box-shadow: 0px 5px 0px;*/
+    }
+    .obracun {
+        width: 80%;
+        margin: 25px auto 0;
+        font-size: 20px;
+        text-align: center;
+
+
+
+    }
+    nav ul {
+        list-style: none;
+        text-align: center;
+    }
+    nav ul li {
+        display: inline-block;
+    }
+    nav ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #aaa;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin: 0 10px;
+    }
+    nav ul li a,
+    nav ul li a:after,
+    nav ul li a:before {
+        transition: all .5s;
+    }
+    nav ul li a:hover {
+        color: #555;
+    }
+
+
+    /* stroke */
+    nav.stroke ul li a,
+    nav.fill ul li a {
+        position: relative;
+    }
+    nav.stroke ul li a:after,
+    nav.fill ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 1px;
+    }
+    nav.stroke ul li a:hover:after {
+        width: 100%;
+    }
+
+    nav.fill ul li a {
+        transition: all 2s;
+    }
+
+    nav.fill ul li a:after {
+        text-align: left;
+        content: '.';
+        margin: 0;
+        opacity: 0;
+    }
+    nav.fill ul li a:hover {
+        color: #fff;
+        z-index: 1;
+    }
+    nav.fill ul li a:hover:after {
+        z-index: -10;
+        animation: fill 1s forwards;
+        -webkit-animation: fill 1s forwards;
+        -moz-animation: fill 1s forwards;
+        opacity: 1;
+    }
+
+    /* Circle */
+    nav.circle ul li a {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    nav.circle ul li a:after {
+        display: block;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '.';
+        color: transparent;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        background: transparent;
+    }
+    nav.circle ul li a:hover:after {
+        -webkit-animation: circle 1.5s ease-in forwards;
+    }
+
+    /* SHIFT */
+    nav.shift ul li a {
+        position:relative;
+        z-index: 1;
+    }
+    nav.shift ul li a:hover {
+        color: #91640F;
+    }
+    nav.shift ul li a:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 1px;
+        content: '.';
+        color: transparent;
+        background: #F1C40F;
+        visibility: none;
+        opacity: 0;
+        z-index: -1;
+    }
+    nav.shift ul li a:hover:after {
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+    }
+
+
+
+    /* Keyframes */
+    @-webkit-keyframes fill {
+        0% {
+            width: 0%;
+            height: 1px;
+        }
+        50% {
+            width: 100%;
+            height: 1px;
+        }
+        100% {
+            width: 100%;
+            height: 100%;
+            background: #333;
+        }
+    }
+
+    /* Keyframes */
+    @-webkit-keyframes circle {
+        0% {
+            width: 1px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            height: 1px;
+            z-index: -1;
+            background: #eee;
+            border-radius: 100%;
+        }
+        100% {
+            background: #aaa;
+            height: 5000%;
+            width: 5000%;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 0;
+        }
+    }
+</style>
