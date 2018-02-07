@@ -93,4 +93,16 @@ public class LoginController {
 		return modelAndView;
 	}
 
+
+	@RequestMapping(value="/globaltel/ponuda", method = RequestMethod.GET)
+	public ModelAndView ponuda(){
+		ModelAndView modelAndView = new ModelAndView();
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User user = userService.findUserByPhone(auth.getName());
+		System.out.println("Ponuda");
+		modelAndView.addObject("userName", "Welcome " + " (" + user.getPhone() + ")");
+		modelAndView.addObject("adminMessage","Content Available Only for Users with Admin Role");
+		modelAndView.setViewName("globaltel/ponuda");
+		return modelAndView;
+	}
 }

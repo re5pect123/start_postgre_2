@@ -21,13 +21,13 @@
     </form>-->
 
     <section style="color: rgba(0, 0, 0, 0.5);">
-        <h2>Shift</h2>
+        <div class="avatar"></div>
         <nav class="shift nav1">
             <ul>
                 <li><a th:href="@{/globaltel/home}">Globaltel</a></li>
                 <li><a th:href="@{/globaltel/statistika}">Statistika</a></li>
                 <li><a th:href="@{/globaltel/listing}">Listing</a></li>
-                <li><a href="#">Ponuda</a></li>
+                <li><a th:href="@{/globaltel/ponuda}">Ponuda</a></li>
             </ul>
         </nav>
     </section>
@@ -143,6 +143,16 @@
 </html>
 
 <style>
+    .avatar {
+        width: 150px;
+        height: 150px;
+        margin: 10px auto 30px;
+        border-radius: 100%;
+        /*	border: 2px solid #aaa; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://i.imgur.com/sAiTfxe.png);
+    }
     table#acrylic {
         border-collapse: separate;
         background: #fff;
